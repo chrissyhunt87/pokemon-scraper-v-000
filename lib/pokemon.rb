@@ -10,9 +10,9 @@ class Pokemon
 
   def self.find(id, db)
     attributes = {
-      :id => db.execute("SELECT pokemon.id FROM pokemon WHERE pokemon.id == #{id};")[0],
-      :name => db.execute("SELECT pokemon.name FROM pokemon WHERE pokemon.id == #{id};")[0],
-      :type => db.execute("SELECT pokemon.type FROM pokemon WHERE pokemon.id == #{id};")[0]
+      :id => db.execute("SELECT pokemon.id FROM pokemon WHERE pokemon.id == #{id};")[0][0],
+      :name => db.execute("SELECT pokemon.name FROM pokemon WHERE pokemon.id == #{id};")[0][0],
+      :type => db.execute("SELECT pokemon.type FROM pokemon WHERE pokemon.id == #{id};")[0][0]
     }
     puts attributes
     self.new(attributes)
