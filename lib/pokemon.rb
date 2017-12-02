@@ -16,7 +16,6 @@ class Pokemon
       :type => db.execute("SELECT pokemon.type FROM pokemon WHERE pokemon.id == #{id};")[0][0]
     }
     self.new(attributes)
-    puts self
   end
 
 end
