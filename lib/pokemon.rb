@@ -2,6 +2,7 @@ class Pokemon
   attr_accessor :name, :type, :db, :id
 
   def initialize(attributes)
+    attributes.each {|key, value| self.send(("#{key}="), value)}
   end
 
   def self.save(name, type, db)
@@ -16,6 +17,7 @@ class Pokemon
     }
     puts attributes
     self.new(attributes)
+    puts self
   end
 
 end
