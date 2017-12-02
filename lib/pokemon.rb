@@ -23,7 +23,6 @@ class Pokemon
       self.hp == 0
       self.alter_hp(0, @db)
     end
-    return self
   end
 
   def alter_hp(hp, db)
