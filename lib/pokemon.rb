@@ -7,9 +7,7 @@ class Pokemon
 
   def self.save(name, type, db)
     db.execute("INSERT INTO pokemon (name, type, hp) VALUES ('#{name}', '#{type}');")
-    if name == "Pikachu"
-      alter_
-      
+
   end
 
   def self.find(id, db)
