@@ -7,6 +7,9 @@ class Pokemon
 
   def self.save(name, type, db)
     db.execute("INSERT INTO pokemon (name, type, hp) VALUES ('#{name}', '#{type}');")
+    if name == "Pikachu"
+      alter_
+
   end
 
   def self.find(id, db)
@@ -18,7 +21,7 @@ class Pokemon
     self.new(attributes)
   end
 
-  def alter_hp(id, hp, db)
+  def alter_hp(hp, db)
     db.execute("UPDATE pokemon SET hp = #{hp} WHERE id = #{id}")
   end
 
