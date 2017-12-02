@@ -13,7 +13,8 @@ class Pokemon
     attributes = {
       :id => db.execute("SELECT pokemon.id FROM pokemon WHERE pokemon.id == #{id};")[0][0],
       :name => db.execute("SELECT pokemon.name FROM pokemon WHERE pokemon.id == #{id};")[0][0],
-      :type => db.execute("SELECT pokemon.type FROM pokemon WHERE pokemon.id == #{id};")[0][0]
+      :type => db.execute("SELECT pokemon.type FROM pokemon WHERE pokemon.id == #{id};")[0][0],
+      :type => db.execute("SELECT pokemon.hp FROM pokemon WHERE pokemon.id == #{id};")[0][0]
     }
     self.new(attributes)
     # if self.name == "Pikachu"
