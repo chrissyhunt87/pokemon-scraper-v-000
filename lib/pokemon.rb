@@ -16,7 +16,6 @@ class Pokemon
     }
     puts attributes
     self.new(attributes)
-    puts self
   end
 
 end
