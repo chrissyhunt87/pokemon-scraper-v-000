@@ -18,4 +18,7 @@ class Pokemon
     self.new(attributes)
   end
 
+  def alter_hp
+  end
+
 end
