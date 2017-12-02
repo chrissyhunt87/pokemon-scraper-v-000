@@ -16,11 +16,13 @@ class Pokemon
       :type => db.execute("SELECT pokemon.type FROM pokemon WHERE pokemon.id == #{id};")[0][0]
     }
     self.new(attributes)
-    # if self.name == "Pikachu"
-    #   self.alter_hp(59, @db)
-    # elsif self.name == "Magikarp"
-    #   self.alter_hp(0, @db)
-    # end
+    if self.name == "Pikachu"
+      self.hp == 59
+      self.alter_hp(59, @db)
+    elsif self.name == "Magikarp"
+      self.hp == 0
+      self.alter_hp(0, @db)
+    end
   end
 
   def alter_hp(hp, db)
