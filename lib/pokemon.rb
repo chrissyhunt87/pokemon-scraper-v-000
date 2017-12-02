@@ -5,8 +5,9 @@ class Pokemon
     attributes.each {|key, value| self.send(("#{key}="), value)}
   end
 
-  def self.save(name, type, hp, db)
-    db.execute("INSERT INTO pokemon (name, type) VALUES ('#{name}', '#{type}');")
+  def self.save(name, type, hp=60, db)
+    db.execute("INSERT INTO pokemon (name, type, hp) VALUES ('#{name}', '#{type}');")
+
   end
 
   def self.find(id, db)
